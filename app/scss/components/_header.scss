@@ -53,27 +53,15 @@
 
   &__link {
     position: relative;
-    transition: color .4s;
-
-    &::before {
-      @include pseudo;
-      bottom: -4px;
-      right: 0;
-      width: 0;
-      height: 1px;
-      background-color: #060907;
-      transition: width .5s;
-    }
+    transition: color .4s, opacity .4s;
 
     &:hover {
-      &::before {
-        width: 100%;
-        left: 0;
-      }
+      opacity: .5;
     }
 
     &:focus {
       color: $lime500;
+      opacity: 1;
     }
   }
 }

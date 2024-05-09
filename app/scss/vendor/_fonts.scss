@@ -35,6 +35,15 @@
 }
 
 @font-face {
+  font-family: 'SF Pro Display';
+  src: url('../fonts/SFProDisplay-Bold.woff2') format('woff2'),
+  url('../fonts/SFProDisplay-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Styrene A LC';
   src: url('../fonts/StyreneALC-BoldItalic.woff2') format('woff2'),
   url('../fonts/StyreneALC-BoldItalic.woff') format('woff');

@@ -55,34 +55,21 @@
 
   &__contacts-link,
   &__link {
-    &::before {
-      @include pseudo;
-      bottom: -4px;
-      right: 0;
-      width: 0;
-      height: 1px;
-      background-color: $accent;
-      transition: width .5s;
-    }
+    transition: color .5s, opacity .5s;
 
     &:hover {
-      color: $accent;
+      opacity: .6;
     }
 
     &:focus {
       color: $accent;
-
-      &::before {
-        width: 100%;
-        left: 0;
-      }
+      opacity: 1;
     }
   }
 
   &__contacts-link {
     letter-spacing: -0.352px;
     line-height: 1.3;
-    transition: color .5s;
     position: relative;
   }
 
@@ -113,7 +100,6 @@
     font-size: 14px;
     font-weight: 400;
     letter-spacing: -0.28px;
-    transition: color .5s;
   }
 
   &__to-top {
