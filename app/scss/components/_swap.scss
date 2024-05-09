@@ -1,0 +1,45 @@
+.swap {
+  @include flex-align-center(8);
+  font-size: 14px;
+  letter-spacing: -0.28px;
+  font-weight: 400;
+
+  &--active {
+    color: #2E322E;
+
+    &-footer {
+      color: #F0F0EC;
+    }
+  }
+
+  &__link {
+    color: rgba(#2E322E, .4);
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    transition: color .4s, border .4s, outline-color .4s;
+
+    &:hover {
+      color: #2E322E;
+      border-bottom-color: #2E322E;
+    }
+
+    &:focus {
+      border-color: #2E322E;
+      color: #2E322E;
+    }
+
+    &--footer {
+      color: rgba(#F0F0EC, .4);
+
+      &:hover {
+        color: $white;
+        border-bottom-color: $white;
+      }
+
+      &:focus {
+        border-color: $white;
+        color: $white;
+      }
+    }
+  }
+}

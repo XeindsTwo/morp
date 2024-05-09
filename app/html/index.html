@@ -1,0 +1,18 @@
+@include('components/_head.html', {
+title: 'Morphism Agency — профильная студия разработки и дизайна'
+})
+
+@include('components/_header.html')
+<img class="figures figures-top" src="images/figures-top.svg" alt="decor">
+<main>
+  @include('home/_home.html')
+  @include('home/_technology.html')
+  @include('home/_portfolio.html')
+  @include('home/_portfolio-2.html')
+  @include('home/_process.html')
+  @include('home/_cta.html')
+  @include('home/_reviews.html')
+</main>
+@include('components/_footer.html')
+<img class="shum" src="images/shum.png" alt="decor">
+<script src="js/main.min.js" type="module"></script>

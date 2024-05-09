@@ -1,0 +1,32 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.32px;
+  background-color: #181D1A;
+  color: $white;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  padding: 23px 48px;
+  transition: background-color .4s, border .4s, box-shadow .4s, color .4s;
+
+  &--white {
+    padding: 19px 40px;
+    border-radius: 20px;
+    background-color: $white;
+    color: #060907;
+
+    &:hover {
+      background-color: transparent;
+      border-color: #060907;
+    }
+
+    &:focus {
+      background-color: $accent;
+      border-color: transparent;
+    }
+  }
+}

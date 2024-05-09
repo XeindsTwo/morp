@@ -1,0 +1,95 @@
+.html {
+  &.active {
+    overflow: hidden;
+  }
+}
+
+.body {
+  font-family: $inter;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #2E322E;
+  background-color: #EFEFEA;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+
+  &--1360 {
+    max-width: 1440px;
+    padding: 0 40px;
+  }
+}
+
+.indent {
+  margin-top: 136px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.figures {
+  @include objectCoverBg;
+  user-select: none;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+
+  &-top {
+    left: 0;
+    top: 0;
+  }
+
+  &-works {
+    top: -176px;
+  }
+
+  &-cta {
+    left: 0;
+    top: -98%;
+  }
+}
+
+.shum {
+  @include objectCoverBg;
+  user-select: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba($lime500, .3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $lime500;
+}
+
+::selection {
+  background-color: $accent;
+  color: $black;
+}

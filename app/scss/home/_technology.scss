@@ -1,0 +1,54 @@
+.technology {
+  position: relative;
+
+  &__inner {
+    @include flex-column(60);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 56px 0;
+    min-height: 695px;
+    background-color: #181D1A;
+    color: #F0F0EC;
+    border-radius: 24px;
+  }
+
+  &__head {
+    @include flex-column(32);
+    align-items: center;
+    max-width: 744px;
+  }
+
+  .title-section {
+    color: #F0F0EC;
+  }
+
+  &__text {
+    line-height: 1.3;
+    max-width: 414px;
+    color: rgba(#EFEFEA, .8);
+  }
+
+  &__list {
+    @include flex-align-center(8);
+    bottom: 198px;
+    position: absolute;
+  }
+
+  &__item {
+    @include flex-center;
+    width: 124px;
+    height: 124px;
+    background-color: rgba(#282D2A, .8);
+    backdrop-filter: blur(8px);
+    border-radius: 28px;
+  }
+
+  &__subtext {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.28px;
+    max-width: 545px;
+    color: rgba(#F0F0EC, .56);
+  }
+}
