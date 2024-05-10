@@ -7,8 +7,8 @@
     padding-top: 72px;
     min-height: 695px;
     width: 100%;
-    background-color: #181D1A;
-    color: #F0F0EC;
+    background-color: $black150;
+    color: $gray;
     border-radius: 24px;
   }
 
@@ -19,7 +19,7 @@
     text-align: center;
     margin: 0 auto;
     position: relative;
-    z-index: 30;
+    z-index: 5;
   }
 
   &__title {
@@ -45,7 +45,7 @@
       @include flex-column(8);
 
       span {
-        color: rgba(#F0F0EC, .56);
+        color: rgba($gray, .56);
         font-size: 14px;
         letter-spacing: -0.28px;
         font-weight: 400;
@@ -79,7 +79,7 @@
     padding: 16px 24px;
     margin-top: auto;
     position: relative;
-    z-index: 30;
+    z-index: 5;
   }
 
   &__left, &__right {
@@ -109,7 +109,7 @@
     padding: 10px 0;
     font-size: 14px;
     letter-spacing: -0.28px;
-    color: #F0F0EC;
+    color: $gray;
     transition: color .4s;
 
     &:hover {

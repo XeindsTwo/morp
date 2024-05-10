@@ -77,7 +77,7 @@
       margin-top: -10px;
       font-size: 14px;
       max-width: 355px;
-      color: rgba(#2E322E, .6);
+      color: rgba($black50, .6);
     }
     @include r($tablet) {
       max-width: 315px;
@@ -322,13 +322,13 @@
 
     &:hover {
       background-color: transparent;
-      border-color: #181D1A;
-      color: #181D1A;
+      border-color: $black150;
+      color: $black150;
     }
 
     &:focus {
       background-color: rgba($white, .9);
-      color: #181D1A;
+      color: $black150;
       border-color: transparent;
     }
 

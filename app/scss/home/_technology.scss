@@ -8,8 +8,8 @@
     text-align: center;
     padding: 56px 0;
     min-height: 695px;
-    background-color: #181D1A;
-    color: #F0F0EC;
+    background-color: $black150;
+    color: $gray;
     border-radius: 24px;
   }
 
@@ -17,16 +17,18 @@
     @include flex-column(32);
     align-items: center;
     max-width: 744px;
+    position: relative;
+    z-index: 5;
   }
 
   .title-section {
-    color: #F0F0EC;
+    color: $gray;
   }
 
   &__text {
     line-height: 1.3;
     max-width: 414px;
-    color: rgba(#EFEFEA, .8);
+    color: rgba($gray50, .8);
   }
 
   &__list {
@@ -39,7 +41,7 @@
     @include flex-center;
     width: 124px;
     height: 124px;
-    background-color: rgba(#282D2A, .8);
+    background-color: rgba($black200, .8);
     backdrop-filter: blur(8px);
     border-radius: 28px;
   }
@@ -49,6 +51,8 @@
     font-weight: 400;
     letter-spacing: -0.28px;
     max-width: 545px;
-    color: rgba(#F0F0EC, .56);
+    color: rgba($gray, .56);
+    position: relative;
+    z-index: 5;
   }
 }

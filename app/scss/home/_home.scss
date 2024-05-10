@@ -1,8 +1,10 @@
 .home {
   margin-top: 70px;
+  position: relative;
+  z-index: 5;
 
   &__title {
-    color: #2E322E;
+    color: $black50;
     font-size: 100px;
     line-height: .9;
     font-weight: 700;

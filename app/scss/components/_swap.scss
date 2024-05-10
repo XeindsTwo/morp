@@ -5,31 +5,31 @@
   font-weight: 400;
 
   &--active {
-    color: #2E322E;
+    color: $black50;
 
     &-footer {
-      color: #F0F0EC;
+      color: $gray;
     }
   }
 
   &__link {
-    color: rgba(#2E322E, .4);
+    color: rgba($black50, .4);
     border: 1px solid transparent;
     outline: 1px solid transparent;
     transition: color .4s, border .4s, outline-color .4s;
 
     &:hover {
-      color: #2E322E;
-      border-bottom-color: #2E322E;
+      color: $black50;
+      border-bottom-color: $black50;
     }
 
     &:focus {
-      border-color: #2E322E;
-      color: #2E322E;
+      border-color: $black50;
+      color: $black50;
     }
 
     &--footer {
-      color: rgba(#F0F0EC, .4);
+      color: rgba($gray, .4);
 
       &:hover {
         color: $white;

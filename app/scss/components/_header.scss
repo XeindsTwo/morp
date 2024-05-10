@@ -1,5 +1,7 @@
 .header {
   padding: 16px 0;
+  position: relative;
+  z-index: 5;
 
   &__inner {
     @include flex-between(30);
@@ -19,7 +21,7 @@
     font-weight: 400;
     font-size: 14px;
     letter-spacing: -0.28px;
-    color: #060907;
+    color: $black100;
   }
 
   &__telegram {
@@ -30,15 +32,15 @@
     transition: color .5s, border .5s;
 
     &:hover {
-      color: #229ED9;
+      color: $blue;
 
       svg g path {
-        fill: #229ED9;
+        fill: $blue;
       }
     }
 
     &:focus {
-      border-color: #060907;
+      border-color: $black100;
     }
   }
 

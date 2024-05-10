@@ -2,6 +2,7 @@
   min-height: 605px;
   display: flex;
   position: relative;
+  z-index: 5;
 
   &__head {
     @include flex-column(32);
@@ -53,8 +54,8 @@
     padding: 32px 16px 16px;
     min-height: 480px;
     width: 350px;
-    background-color: #181D1A;
-    color: #F0F0EC;
+    background-color: $black150;
+    color: $gray;
     border-radius: 30px;
     overflow: hidden;
 
@@ -71,13 +72,13 @@
     }
 
     &.trainme {
-      background-color: #24A549;
+      background-color: $green;
       transform: rotate(-7deg) translateX(-29%) translateY(125px);
       z-index: 4;
     }
 
     &.spacex {
-      background-color: #000002;
+      background-color: $black;
       transform: rotate(20deg) translateX(-13%) translateY(95px);
       z-index: 2;
     }
@@ -135,7 +136,7 @@
   }
 
   &__description {
-    color: rgba(#F0F0EC, .56);
+    color: rgba($gray, .56);
     font-size: 14px;
     font-weight: 400;
     letter-spacing: -0.28px;
@@ -157,7 +158,7 @@
     padding: 24px;
     width: 100%;
     letter-spacing: -0.32px;
-    background-color: rgba(#EFEFEA, .08);
+    background-color: rgba($gray50, .08);
     backdrop-filter: blur(8px);
     overflow: hidden;
     border: 2px solid transparent;
@@ -165,37 +166,37 @@
 
     &.manta {
       &:hover {
-        background-color: #b426b5;
+        background-color: $pink100;
       }
 
       &:focus {
-        background-color: rgba(#EFEFEA, .08);
-        border-color: #e433e5;
+        background-color: rgba($gray50, .08);
+        border-color: $pink;
       }
     }
 
     &.fibert {
       &:hover {
-        background-color: #ECFF3B;
-        color: #10150B;
+        background-color: $yellow;
+        color: $black50;
       }
 
       &:focus {
         background-color: transparent;
         color: $white;
-        border-color: #ECFF3B;
+        border-color: $yellow;
       }
     }
 
     &.trainme {
       &:hover {
-        background-color: #26c554;
+        background-color: $green200;
       }
 
       &:focus {
         background-color: transparent;
         color: $white;
-        border-color: #2ef66b;
+        border-color: $green50;
       }
     }
 
@@ -211,7 +212,7 @@
     }
 
     &.flyswap {
-      background-color: rgba(#060907, .06);
+      background-color: rgba($black100, .06);
       color: $black;
       position: relative;
       border-color: transparent;
@@ -227,7 +228,7 @@
 
       &:focus {
         background-color: transparent;
-        border-color: #0476FC;
+        border-color: $blue500;
         color: $black;
 
         &::before {
@@ -243,16 +244,16 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(270deg, #FC6834 19.07%, #5E2FFF 63.52%, #0476FC 98.18%), #000;
+        background: linear-gradient(270deg, #FC6834 19.07%, #5E2FFF 63.52%, $blue500 98.18%), $black;
         transition: opacity .4s;
       }
     }
 
     &.telegram {
-      background-color: rgba(#EFEFEA, .12);
+      background-color: rgba($gray50, .12);
 
       &:hover {
-        background-color: #5fbcf3;
+        background-color: $blue50;
       }
 
       &:focus {

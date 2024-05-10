@@ -2,7 +2,7 @@
   &__inner {
     padding: 56px 20px;
     border-radius: 24px;
-    background-color: #181D1A;
+    background-color: $black150;
     color: $white;
   }
 
@@ -12,11 +12,14 @@
   }
 
   .title-section {
-    color: #F0F0EC;
+    color: $gray;
+    position: relative;
+    z-index: 5;
   }
 
   &__content {
     position: relative;
+    z-index: 5;
     max-width: 1065px;
     padding-top: 72px;
     margin: 0 auto;
@@ -42,7 +45,7 @@
 
   &__step {
     @include flex-align-center(8);
-    background-color: rgba(#282D2A, .8);
+    background-color: rgba($black200, .8);
     border-radius: 16px;
     padding: 16px 16px;
     max-width: 288px;
@@ -85,7 +88,7 @@
     position: relative;
     @include flex-align-center(8);
     background-color: $accent;
-    color: #181D1A;
+    color: $black150;
     padding: 23px 47px;
     box-shadow: 0 0 64px 0 rgba(191, 252, 39, 0.32),
     0 0 0 rgba(0, 0, 0, 0),
@@ -108,7 +111,7 @@
 
     &:hover {
       background-color: $accent;
-      color: #181D1A;
+      color: $black150;
       box-shadow: 0 0 64px 0 rgba(191, 252, 39, 0.64),
       0 0 0 rgba(0, 0, 0, 0),
       0 0 0 rgba(0, 0, 0, 0);
@@ -141,6 +144,6 @@
     font-size: 14px;
     font-weight: 400;
     letter-spacing: -0.28px;
-    color: rgba(#F0F0EC, .56);
+    color: rgba($gray, .56);
   }
 }
