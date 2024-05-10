@@ -4,6 +4,12 @@
   @include r($tablet) {
     margin-top: 15px;
   }
+  @include r($sm) {
+    margin-top: 10px;
+  }
+  @include r($phone) {
+    margin-top: 8px;
+  }
 
   .title-section {
     text-align: left;
@@ -36,6 +42,7 @@
     }
     @media (max-width: 910px) {
       padding: 30px 28px;
+      border-radius: 20px;
     }
     @include r($tablet) {
       padding: 26px 24px;
@@ -43,6 +50,7 @@
     }
     @include r($phone) {
       margin: 0 -16px;
+      border-radius: 16px;
     }
   }
 
