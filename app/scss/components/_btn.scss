@@ -12,6 +12,25 @@
   border-radius: 24px;
   padding: 23px 48px;
   transition: background-color .4s, border .4s, box-shadow .4s, color .4s;
+  @include r($lg) {
+    padding: 20px 44px;
+    border-radius: 20px;
+  }
+  @include r($phone) {
+    padding: 19px 40px;
+    font-size: 14px;
+    letter-spacing: -0.28px;
+  }
+
+  &:hover {
+    background-color: rgba(#181D1A, .8);
+  }
+
+  &:focus {
+    background-color: rgba(#181D1A, 0);
+    border-color: #181D1A;
+    color: #181D1A;
+  }
 
   &--white {
     padding: 19px 40px;
