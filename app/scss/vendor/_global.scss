@@ -85,11 +85,47 @@
 
   &-works {
     top: -176px;
+    @media (max-width: 1350px) {
+      top: -140px;
+    }
+    @include r($desktop) {
+      top: -100px;
+    }
+    @media (max-width: 1120px) {
+      top: -50px;
+    }
+    @include r($lg) {
+      height: 750px;
+    }
   }
 
   &-cta {
     left: 0;
     top: -98%;
+    @media (max-width: 1300px) {
+      top: -38%;
+    }
+    @include r($desktop) {
+      top: -5%;
+    }
+    @media (max-width: 1100px) {
+      top: 20%;
+    }
+    @include r($lg) {
+      top: 30%;
+    }
+    @media (max-width: 850px) {
+      top: 50%;
+    }
+    @media (max-width: 660px) {
+      top: 70%;
+    }
+    @media (max-width: 550px) {
+      top: 78%;
+    }
+    @include r($phone) {
+      display: none;
+    }
   }
 }
 

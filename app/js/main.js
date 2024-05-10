@@ -21,3 +21,19 @@ jabberBtn.addEventListener('click', function () {
       });
   }
 });
+
+new Swiper('.portfolio__swiper', {
+  centeredSlides: true,
+  initialSlide: 2,
+  slidesPerView: 'auto',
+  freeMode: true,
+  spaceBetween: 8,
+  breakpoints: {
+    610: {
+      spaceBetween: 15
+    },
+    530: {
+      spaceBetween: 10
+    }
+  }
+});

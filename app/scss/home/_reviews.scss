@@ -39,7 +39,6 @@
       font-size: 36px;
     }
 
-
     span {
       @media (max-width: 550px) {
         display: block;
@@ -148,14 +147,16 @@
     }
 
     li:nth-child(3) {
-      &::before {
-        @include pseudo;
-        right: -8px;
-        width: 1px;
-        height: calc(100% - 16px);
-        background-color: $gray150;
-        @media (max-width: 700px) {
-          display: none;
+      @media (max-width: 1105px) {
+        &::before {
+          @include pseudo;
+          right: -8px;
+          width: 1px;
+          height: calc(100% - 16px);
+          background-color: $gray150;
+          @media (max-width: 700px) {
+            display: none;
+          }
         }
       }
     }

@@ -242,6 +242,9 @@
     @include r($lg) {
       border-radius: 24px;
     }
+    @include r($phone) {
+      padding: 24px 55px;
+    }
 
     &::after {
       @include pseudo;

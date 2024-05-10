@@ -3,6 +3,9 @@
   display: flex;
   position: relative;
   z-index: 5;
+  @include r($lg) {
+    min-height: auto;
+  }
 
   &__head {
     @include flex-column(32);
@@ -10,15 +13,35 @@
     text-align: center;
     max-width: 808px;
     margin: 70px auto 0;
+    @include r($lg) {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 810px) {
+      gap: 24px;
+    }
 
     p {
       line-height: 1.3;
       letter-spacing: -0.352px;
       max-width: 395px;
+      @include r($lg) {
+        max-width: 334px;
+      }
     }
   }
 
   &__title {
+    @include r($phone) {
+      font-size: 40px;
+    }
+    @media (max-width: 375px) {
+      font-size: 38px;
+    }
+    @media (max-width: 360px) {
+      font-size: 36px;
+    }
+
     span {
       display: block;
       font-family: $styreneALC;
@@ -32,17 +55,33 @@
     left: 50%;
     top: -35px;
     transform: translateX(-50%);
-
-    &.non {
+    @include r($lg) {
+      @include flex-align-center(15);
+      display: none;
+      margin: 0 -20px;
+      padding: 0 20px;
       position: static;
       transform: none;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-
-      .portfolio__item {
-        position: relative !important;
-        transform: none !important;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
       }
+    }
+  }
+
+  &__swiper {
+    display: none;
+    cursor: grab;
+    @include r($lg) {
+      display: block;
+    }
+
+    .swiper-wrapper {
+      box-sizing: border-box;
+    }
+
+    .swiper-slide {
+      width: auto;
     }
   }
 
@@ -58,35 +97,144 @@
     color: $gray;
     border-radius: 30px;
     overflow: hidden;
+    @include r($lg) {
+      min-height: 402px;
+      border-radius: 26px;
+      position: relative;
+      transform: none !important;
+    }
+    @media (max-width: 860px) {
+      width: 330px;
+    }
+    @include r($tablet) {
+      min-height: 382px;
+      width: 310px;
+      border-radius: 24px;
+    }
+    @media (max-width: 660px) {
+      min-height: 352px;
+      border-radius: 22px;
+    }
+    @include r($sm) {
+      padding: 26px 14px 12px;
+      min-height: 342px;
+    }
+    @media (max-width: 520px) {
+      min-height: 327px;
+      width: 300px;
+    }
+    @include r($phone) {
+      width: 280px;
+      border-radius: 20px;
+      padding: 23px 12px 12px;
+    }
+    @media (max-width: 380px) {
+      width: 275px;
+    }
+    @media (max-width: 360px) {
+      width: 265px;
+    }
+
+    img {
+      user-select: none;
+    }
 
     &.manta {
       transform: rotate(-11deg) translateX(-100%);
       top: 0;
       left: 0;
       z-index: 1;
+
+      .portfolio__logo {
+        @media (max-width: 870px) {
+          width: auto;
+          height: 24px;
+        }
+        @include r($tablet) {
+          height: 22px;
+        }
+        @media (max-width: 660px) {
+          height: 21px;
+        }
+      }
     }
 
     &.fibert {
       transform: rotate(2deg) translateX(-73.5%) translateY(155px);
       z-index: 5;
+
+      .portfolio__logo {
+        @media (max-width: 870px) {
+          width: auto;
+          height: 20px;
+        }
+        @include r($tablet) {
+          height: 19px;
+        }
+        @media (max-width: 660px) {
+          height: 18px;
+        }
+      }
     }
 
     &.trainme {
       background-color: $green;
       transform: rotate(-7deg) translateX(-29%) translateY(125px);
       z-index: 4;
+      @include r($lg) {
+        .portfolio__img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .portfolio__logo {
+        @media (max-width: 870px) {
+          width: auto;
+          height: 20px;
+        }
+        @include r($tablet) {
+          height: 19px;
+        }
+        @media (max-width: 660px) {
+          height: 18px;
+        }
+      }
     }
 
     &.spacex {
       background-color: $black;
       transform: rotate(20deg) translateX(-13%) translateY(95px);
       z-index: 2;
+
+      .portfolio__logo {
+        @media (max-width: 870px) {
+          width: auto;
+          height: 20px;
+        }
+        @include r($tablet) {
+          height: 18px;
+        }
+        @media (max-width: 660px) {
+          height: 17px;
+        }
+      }
     }
 
     &.flyswap {
       background-color: $white;
       transform: rotate(-7deg) translateX(12%) translateY(55px);
       z-index: 3;
+
+      .portfolio__logo {
+        @media (max-width: 870px) {
+          width: auto;
+          height: 24px;
+        }
+        @include r($tablet) {
+          height: 22px;
+        }
+      }
     }
 
     &.telegram {
@@ -101,9 +249,18 @@
     align-items: center;
     max-width: 288px;
     width: 100%;
+    @media (max-width: 870px) {
+      gap: 14px;
+    }
+    @include r($sm) {
+      gap: 10px;
+    }
 
-    .short {
+    &.short {
       max-width: 267px;
+      @include r($phone) {
+        gap: 14px;
+      }
     }
 
     &.trainme {
@@ -120,18 +277,29 @@
   &__logo {
     @include objectCoverBg;
     user-select: none;
+    @media (max-width: 870px) {
+      width: auto;
+    }
   }
 
   &__name {
-    font-family: $sfpro;
+    font-family: $interDisplay;
     font-size: 28px;
     font-weight: 600;
     line-height: .9;
     letter-spacing: -0.7px;
-
-    &.telegram {
-      font-family: $interDisplay;
-      letter-spacing: -0.84px;
+    @include r($lg) {
+      font-size: 24px;
+    }
+    @include r($tablet) {
+      font-size: 22px;
+      letter-spacing: -0.5px;
+    }
+    @media (max-width: 660px) {
+      letter-spacing: -0.4px;
+    }
+    @include r($phone) {
+      font-size: 20px;
     }
   }
 
@@ -140,6 +308,9 @@
     font-size: 14px;
     font-weight: 400;
     letter-spacing: -0.28px;
+    @media (max-width: 520px) {
+      font-size: 12px;
+    }
 
     &.trainme, &.telegram {
       color: rgba($white, .9);
@@ -163,6 +334,20 @@
     overflow: hidden;
     border: 2px solid transparent;
     transition: background-color .4s, border .4s, color .4s;
+    @media (max-width: 860px) {
+      padding: 20px;
+      border-radius: 20px;
+    }
+    @include r($sm) {
+      font-size: 14px;
+      padding: 17px;
+    }
+    @media (max-width: 520px) {
+      border-radius: 18px;
+    }
+    @include r($phone) {
+      border-radius: 16px;
+    }
 
     &.manta {
       &:hover {
@@ -269,10 +454,42 @@
 
     &.manta {
       bottom: 0;
+      @include r($lg) {
+        height: 300px;
+        object-position: top;
+        width: 100%;
+      }
+      @include r($tablet) {
+        height: 280px;
+      }
+      @media (max-width: 660px) {
+        height: 256px;
+      }
+      @include r($sm) {
+        height: 240px;
+      }
     }
 
     &.fibert {
       bottom: 127px;
+      @include r($lg) {
+        height: 180px;
+      }
+      @include r($tablet) {
+        height: 160px;
+        bottom: 112px;
+      }
+      @media (max-width: 660px) {
+        height: 145px;
+        bottom: 106px;
+      }
+      @include r($sm) {
+        height: 135px;
+        bottom: 103px;
+      }
+      @media (max-width: 520px) {
+        height: 132px;
+      }
     }
 
     &.trainme {
@@ -283,10 +500,43 @@
     &.spacex {
       bottom: 0;
       transform: translateY(-36%);
+      @include r($lg) {
+        height: 220px;
+        width: 100%;
+      }
+      @include r($tablet) {
+        height: 200px;
+        transform: translateY(-45%);
+        width: max-content;
+      }
+      @media (max-width: 660px) {
+        height: 180px;
+        transform: translateY(-50%);
+      }
+      @include r($sm) {
+        height: 170px;
+        transform: translateY(-51%);
+      }
     }
 
     &.flyswap, &.telegram {
       @include topLeft50;
+    }
+
+    &.flyswap {
+      @include r($lg) {
+        height: 30px;
+      }
+      @include r($tablet) {
+        height: 28px;
+      }
+    }
+
+    &.telegram {
+      @include r($tablet) {
+        width: auto;
+        height: 50px;
+      }
     }
   }
 }
