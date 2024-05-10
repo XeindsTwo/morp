@@ -33,6 +33,7 @@
 
   &__list {
     @include flex-align-center(8);
+    justify-content: flex-start;
     bottom: 198px;
     position: absolute;
   }

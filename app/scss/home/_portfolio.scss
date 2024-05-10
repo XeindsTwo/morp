@@ -98,7 +98,7 @@
     border-radius: 30px;
     overflow: hidden;
     @include r($lg) {
-      min-height: 402px;
+      min-height: 450px;
       border-radius: 26px;
       position: relative;
       transform: none !important;
@@ -107,24 +107,24 @@
       width: 330px;
     }
     @include r($tablet) {
-      min-height: 382px;
+      min-height: 415px;
       width: 310px;
       border-radius: 24px;
     }
     @media (max-width: 660px) {
-      min-height: 352px;
+      min-height: 390px;
       border-radius: 22px;
     }
     @include r($sm) {
       padding: 26px 14px 12px;
-      min-height: 342px;
+      min-height: 370px;
     }
     @media (max-width: 520px) {
-      min-height: 327px;
       width: 300px;
     }
     @include r($phone) {
       width: 280px;
+      min-height: 365px;
       border-radius: 20px;
       padding: 23px 12px 12px;
     }
