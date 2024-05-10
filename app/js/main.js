@@ -38,7 +38,7 @@ new Swiper('.portfolio__swiper', {
   }
 });
 
-const loop = horizontalLoop(".technology__item", {
+horizontalLoop(".technology__item", {
   repeat: -1,
   paused: false,
 });
