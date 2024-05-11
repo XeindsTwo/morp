@@ -1,6 +1,18 @@
 .footer {
   position: relative;
   padding-bottom: 20px;
+  @media (max-width: 930px) {
+    padding-bottom: 15px;
+  }
+  @include r($tablet) {
+    padding-bottom: 10px;
+  }
+  @include r($tablet) {
+    margin-top: 90px;
+  }
+  @include r($phone) {
+    padding-bottom: 5px;
+  }
 
   &__inner {
     @include flex-column(90);
@@ -10,6 +22,41 @@
     background-color: $black150;
     color: $gray;
     border-radius: 24px;
+    @media (max-width: 1300px) {
+      min-height: 655px;
+    }
+    @media (max-width: 1150px) {
+      padding-top: 60px;
+      min-height: 630px;
+    }
+    @media (max-width: 1100px) {
+      min-height: 600px;
+    }
+    @include r($lg) {
+      min-height: 560px;
+    }
+    @media (max-width: 930px) {
+      min-height: 530px;
+    }
+    @media (max-width: 860px) {
+      min-height: 510px;
+      padding-top: 48px;
+    }
+    @include r($tablet) {
+      margin: 0 -10px;
+      min-height: 620px;
+      width: auto;
+    }
+    @include r($sm) {
+      min-height: 600px;
+    }
+    @media (max-width: 580px) {
+      min-height: 590px;
+    }
+    @include r($phone) {
+      margin: 0 -16px;
+      border-radius: 16px;
+    }
   }
 
   &__head {
@@ -20,6 +67,15 @@
     margin: 0 auto;
     position: relative;
     z-index: 5;
+    @include r($lg) {
+      max-width: 590px;
+      padding: 0 20px;
+      gap: 40px;
+    }
+    @media (max-width: 680px) {
+      max-width: 440px;
+      gap: 32px;
+    }
   }
 
   &__title {
@@ -28,17 +84,68 @@
     font-weight: 600;
     letter-spacing: -2.5px;
     line-height: .9;
+    @media (max-width: 1300px) {
+      font-size: 94px;
+    }
+    @include r($desktop) {
+      font-size: 88px;
+    }
+    @media (max-width: 1150px) {
+      font-size: 84px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 78px;
+    }
+    @include r($lg) {
+      font-size: 70px;
+    }
+    @media (max-width: 930px) {
+      font-size: 68px;
+    }
+    @media (max-width: 860px) {
+      font-size: 64px;
+    }
+    @media (max-width: 800px) {
+      font-size: 60px;
+    }
+    @media (max-width: 680px) {
+      font-size: 56px;
+    }
+    @include r($sm) {
+      font-size: 52px;
+    }
+    @media (max-width: 520px) {
+      font-size: 50px;
+    }
+    @include r($phone) {
+      letter-spacing: -1.2px;
+      font-size: 48px;
+    }
+    @media (max-width: 365px) {
+      font-size: 44px;
+    }
   }
 
   &__contacts {
     @include flex-align-center(24);
     max-width: 486px;
+    @include r($tablet) {
+      flex-direction: column;
+      gap: 16px;
+    }
 
     &-middle {
       position: relative;
       padding: 0 24px;
       border-left: 1px solid rgba($white, .16);
       border-right: 1px solid rgba($white, .16);
+      @include r($tablet) {
+        border-right: none;
+        border-left: none;
+        border-top: 1px solid rgba($white, .16);
+        border-bottom: 1px solid rgba($white, .16);
+        padding: 16px 0;
+      }
     }
 
     li {
@@ -49,6 +156,10 @@
         font-size: 14px;
         letter-spacing: -0.28px;
         font-weight: 400;
+        @media (max-width: 430px) {
+          letter-spacing: -0.24px;
+          font-size: 12px;
+        }
       }
     }
   }
@@ -56,6 +167,10 @@
   &__contacts-link,
   &__link {
     transition: color .5s, opacity .5s;
+    letter-spacing: -0.308px;
+    @media (max-width: 430px) {
+      font-size: 14px;
+    }
 
     &:hover {
       opacity: .6;
@@ -80,19 +195,37 @@
     margin-top: auto;
     position: relative;
     z-index: 5;
+    @include r($phone) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
   }
 
   &__left, &__right {
     max-width: 240px;
     width: 100%;
+    @include r($phone) {
+      max-width: max-content;
+    }
   }
 
   &__left {
     @include flex-align-center(32);
+    @include r($lg) {
+      gap: 26px;
+    }
+    @include r($phone) {
+      max-width: 100%;
+      justify-content: space-between;
+    }
   }
 
   &__links {
     @include flex-align-center(16);
+    @media (max-width: 930px) {
+      display: none;
+    }
   }
 
   &__link {
@@ -111,6 +244,9 @@
     letter-spacing: -0.28px;
     color: $gray;
     transition: color .4s;
+    @include r($phone) {
+      padding: 4px 0 0;
+    }
 
     &:hover {
       color: $accent;
@@ -158,5 +294,86 @@
     transform: translateX(-50%) translateY(-21%);
     position: absolute;
     top: 0;
+    @media (max-width: 1300px) {
+      width: auto;
+      height: 820px;
+    }
+    @include r($desktop) {
+      height: 770px;
+      transform: translateX(-50%) translateY(-19%);
+    }
+    @media (max-width: 1150px) {
+      height: 740px;
+      transform: translateX(-50%) translateY(-20%);
+    }
+    @media (max-width: 1100px) {
+      height: 720px;
+    }
+    @media (max-width: 1050px) {
+      height: 680px;
+      transform: translateX(-50%) translateY(-17%);
+    }
+    @include r($lg) {
+      height: 650px;
+      transform: translateX(-50%) translateY(-19%);
+    }
+    @media (max-width: 930px) {
+      height: 610px;
+    }
+    @media (max-width: 910px) {
+      border-radius: 20px;
+    }
+    @media (max-width: 860px) {
+      height: 560px;
+      transform: translateX(-50%) translateY(-13%);
+    }
+    @media (max-width: 800px) {
+      height: 530px;
+      transform: translateX(-50%) translateY(-9%);
+    }
+    @include r($tablet) {
+      height: 500px;
+      transform: translateX(-50%) translateY(17%);
+    }
+    @media (max-width: 705px) {
+      height: 470px;
+      transform: translateX(-50%) translateY(24%);
+    }
+    @media (max-width: 680px) {
+      height: 456px;
+      transform: translateX(-50%) translateY(25%);
+    }
+    @include r($sm) {
+      height: 420px;
+      transform: translateX(-50%) translateY(31%);
+    }
+    @media (max-width: 580px) {
+      height: 390px;
+      transform: translateX(-50%) translateY(35%);
+    }
+    @media (max-width: 520px) {
+      height: 350px;
+      transform: translateX(-50%) translateY(49%);
+    }
+    @media (max-width: 495px) {
+      height: 320px;
+      transform: translateX(-50%) translateY(60%);
+    }
+    @include r($phone) {
+      height: 290px;
+      transform: translateX(-50%) translateY(75%);
+    }
+    @media (max-width: 435px) {
+      height: 265px;
+      transform: translateX(-50%) translateY(95%);
+    }
+    @media (max-width: 415px) {
+      height: 250px;
+      transform: translateX(-50%) translateY(101%);
+    }
+    @media (max-width: 380px) {
+      height: 235px;
+      transform: translateX(-50%) translateY(112%);
+    }
   }
 }
