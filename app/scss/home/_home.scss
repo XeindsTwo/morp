@@ -118,16 +118,19 @@
         margin-top: -23px;
       }
       @media (max-width: 480px) {
-        margin-top: -16px;
+        margin-top: -19px;
       }
       @include r($phone) {
         margin-top: -13px;
       }
       @media (max-width: 430px) {
-        margin-top: -20px;
+        margin-top: -12px;
       }
       @media (max-width: 395px) {
-        margin-top: -23px;
+        margin-top: -11px;
+      }
+      @media (max-width: 375px) {
+        margin-top: -9px;
       }
     }
 
@@ -159,13 +162,10 @@
         margin-top: -56px;
       }
       @include r($phone) {
-        margin-top: -53px;
-      }
-      @media (max-width: 430px) {
-        margin-top: -60px;
+        margin-top: -54px;
       }
       @media (max-width: 395px) {
-        margin-top: -64px;
+        margin-top: -51px;
       }
     }
   }
@@ -212,30 +212,28 @@
       height: 140px;
     }
     @media (max-width: 520px) {
+      @include objectCoverBg;
+      height: auto;
+      width: 100%;
       transform: translateX(-28px) translateY(-2px);
-    }
-    @media (max-width: 480px) {
-      height: 126px;
     }
     @include r($phone) {
       height: 115px;
       transform: translateX(-22px) translateY(-2px);
     }
     @media (max-width: 430px) {
-      margin: 0 -30px;
-      height: 126px;
-      transform: translateX(14px) translateY(-2px);
+      transform: translateX(-22px) translateY(-2px);
+    }
+    @media (max-width: 420px) {
+
     }
     @media (max-width: 395px) {
-      height: 136px;
-      transform: translateX(32px) translateY(-2px) scale(1.08);
-      margin: 0 -40px;
-    }
-    @media (max-width: 375px) {
-      transform: translateX(34px) translateY(-2px) scale(1.08);
+      height: 106px;
+      transform: translateX(14px) translateY(-2px);
     }
     @media (max-width: 365px) {
-      transform: translateX(35px) translateY(-2px) scale(1.1);
+      height: 102px;
+      transform: translateX(18px) translateY(-3px);
     }
   }
 
@@ -286,16 +284,16 @@
       transform: translateX(-12px) translateY(41px);
     }
     @media (max-width: 430px) {
-      transform: translateX(-4px) translateY(34px);
+      transform: translateX(-2px) translateY(41px);
     }
     @media (max-width: 395px) {
-      transform: translateX(15px) translateY(30px);
+      transform: translateX(27px) translateY(44px);
     }
     @media (max-width: 375px) {
-      transform: translateX(18px) translateY(29px);
+      transform: translateX(27px) translateY(44px);
     }
     @media (max-width: 365px) {
-      transform: translateX(22px) translateY(29px);
+      transform: translateX(32px) translateY(44px);
     }
   }
 

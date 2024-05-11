@@ -123,16 +123,13 @@
       width: 300px;
     }
     @include r($phone) {
-      width: 280px;
+      width: 290px;
       min-height: 365px;
       border-radius: 20px;
       padding: 23px 12px 12px;
     }
-    @media (max-width: 380px) {
-      width: 275px;
-    }
-    @media (max-width: 360px) {
-      width: 265px;
+    @media (max-width: 375px) {
+      width: 280px;
     }
 
     img {
@@ -499,23 +496,23 @@
 
     &.spacex {
       bottom: 0;
-      transform: translateY(-36%);
+      transform: translateY(-22%);
       @include r($lg) {
+        transform: translateY(-39%);
         height: 220px;
         width: 100%;
       }
       @include r($tablet) {
-        height: 200px;
-        transform: translateY(-45%);
+        height: 210px;
+        transform: translateY(-39%);
         width: max-content;
       }
-      @media (max-width: 660px) {
-        height: 180px;
-        transform: translateY(-50%);
-      }
       @include r($sm) {
-        height: 170px;
-        transform: translateY(-51%);
+        transform: translateY(-27%);
+      }
+      @include r($phone) {
+        height: 200px;
+        transform: translateY(-30%);
       }
     }
 
