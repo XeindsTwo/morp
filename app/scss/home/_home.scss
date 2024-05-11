@@ -385,9 +385,20 @@
     display: none;
     @media (max-width: 1115px) {
       display: flex;
+      &.mobile {
+        display: none;
+      }
     }
     @media (max-width: 795px) {
       display: none;
+      &.mobile {
+        display: flex;
+        width: 100%;
+
+        .header__telegram {
+          display: flex;
+        }
+      }
     }
     @media (max-width: 410px) {
       margin: 0 -4px;
