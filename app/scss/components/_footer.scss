@@ -203,7 +203,7 @@
   }
 
   &__left, &__right {
-    max-width: 240px;
+    max-width: 220px;
     width: 100%;
     @include r($phone) {
       max-width: max-content;
@@ -223,7 +223,7 @@
 
   &__links {
     @include flex-align-center(16);
-    @media (max-width: 930px) {
+    @media (max-width: 875px) {
       display: none;
     }
   }
@@ -341,7 +341,7 @@
     }
     @media (max-width: 680px) {
       height: 456px;
-      transform: translateX(-50%) translateY(25%);
+      transform: translateX(-50%) translateY(31%);
     }
     @include r($sm) {
       height: 420px;
