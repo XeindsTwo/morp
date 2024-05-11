@@ -21,11 +21,12 @@
       padding: 48px 20px 38px;
     }
     @media (max-width: 540px) {
-      padding-bottom: 0;
+      padding-bottom: 18px;
     }
     @include r($phone) {
       margin: 0 -16px;
       border-radius: 16px;
+      padding-bottom: 15px;
     }
   }
 
