@@ -12,11 +12,19 @@
     }
   }
 
+  &.mobile {
+    display: flex;
+    font-size: 16px;
+  }
+
   &__link {
     color: rgba($black50, .4);
     border: 1px solid transparent;
     outline: 1px solid transparent;
     transition: color .4s, border .4s, outline-color .4s;
+    @media (max-width: 670px) {
+      color: rgba($black50, .5);
+    }
 
     &:hover {
       color: $black50;

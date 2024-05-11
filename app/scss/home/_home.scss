@@ -11,13 +11,16 @@
   @media (max-width: 795px) {
     margin-top: 30px;
   }
+  @media (max-width: 560px) {
+    margin-top: 20px;
+  }
   @include r($phone) {
     margin-top: 0;
   }
 
   &__inner {
     @include r($phone) {
-      padding-top: 30px;
+      padding-top: 20px;
       height: calc(100vh - 130px);
       display: flex;
       flex-direction: column;
