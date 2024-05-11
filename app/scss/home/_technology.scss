@@ -37,6 +37,10 @@
     max-width: 744px;
     position: relative;
     z-index: 5;
+
+    &.short {
+      max-width: 670px;
+    }
   }
 
   .title-section {
@@ -59,6 +63,10 @@
     @include r($phone) {
       font-size: 14px;
       max-width: 335px;
+    }
+
+    &.short {
+      max-width: 340px;
     }
   }
 
@@ -219,6 +227,10 @@
       font-size: 12px;
       letter-spacing: -0.24px;
       max-width: 345px;
+    }
+
+    &.short {
+      max-width: 423px;
     }
   }
 }

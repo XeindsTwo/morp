@@ -76,6 +76,10 @@
     @media (max-width: 430px) {
       gap: 25px;
     }
+
+    &.short {
+      max-width: 380px;
+    }
   }
 
   &__text {

@@ -76,6 +76,37 @@
       max-width: 440px;
       gap: 32px;
     }
+
+    &.en {
+      max-width: 725px;
+      @media (max-width: 1300px) {
+        max-width: 690px;
+      }
+      @include r($desktop) {
+        max-width: 660px;
+      }
+      @media (max-width: 1150px) {
+        max-width: 570px;
+      }
+      @include r($lg) {
+        max-width: 530px;
+      }
+      @media (max-width: 860px) {
+        max-width: 500px;
+      }
+      @media (max-width: 800px) {
+        max-width: 450px;
+      }
+      @media (max-width: 680px) {
+        max-width: 440px;
+      }
+      @include r($sm) {
+        max-width: 410px;
+      }
+      @media (max-width: 520px) {
+        max-width: 380px;
+      }
+    }
   }
 
   &__title {

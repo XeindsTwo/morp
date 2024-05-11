@@ -50,6 +50,14 @@
     }
   }
 
+  &__text {
+    &.en {
+      @include r($lg) {
+        max-width: 350px;
+      }
+    }
+  }
+
   &__list {
     position: absolute;
     left: 50%;
@@ -257,6 +265,20 @@
       max-width: 267px;
       @include r($phone) {
         gap: 14px;
+      }
+
+      &--trainme-en {
+        max-width: 239px;
+      }
+
+      &--fibert-en {
+        max-width: 215px;
+      }
+
+      &--flyswap-en {
+        .portfolio__description {
+          max-width: 215px;
+        }
       }
     }
 

@@ -288,6 +288,10 @@
         fill: $white;
       }
     }
+
+    &.en {
+      padding: 23px 41px;
+    }
   }
 
   &__text {
@@ -300,6 +304,10 @@
     color: rgba($gray, .56);
     @media (max-width: 540px) {
       display: none;
+    }
+
+    &.short {
+      max-width: 452px;
     }
   }
 }
