@@ -1,6 +1,14 @@
 .technology {
   position: relative;
 
+  .technologies {
+    display: flex;
+    gap: 8px;
+    @include r($sm) {
+      gap: 6px;
+    }
+  }
+
   &__inner {
     @include flex-column(90);
     justify-content: space-between;
@@ -9,6 +17,8 @@
     padding: 56px 0;
     background-color: $black150;
     color: $gray;
+    margin: 0 auto;
+    max-width: 960px;
     border-radius: 24px;
     @media (max-width: 1100px) {
       padding: 48px 0;

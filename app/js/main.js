@@ -22,6 +22,21 @@ jabberBtn.addEventListener('click', function () {
   }
 });
 
+new Swiper('.portfolio-desktop', {
+  centeredSlides: true,
+  initialSlide: 3,
+  slidesPerView: 'auto',
+  speed: 1000,
+  keyboard: {
+    enabled: true,
+  },
+  spaceBetween: 16,
+  navigation: {
+    prevEl: '.portfolio-desktop__btn--prev',
+    nextEl: '.portfolio-desktop__btn--next'
+  },
+});
+
 new Swiper('.portfolio__swiper', {
   centeredSlides: true,
   initialSlide: 2,
